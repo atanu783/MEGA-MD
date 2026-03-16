@@ -10,9 +10,7 @@
 
 [![Version](https://img.shields.io/badge/Version-6.0.0-blue?style=for-the-badge&logo=github)](https://github.com/GlobalTechInfo/MEGA-MD)
 [![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![WhatsApp](https://img.shields.io/badge/Baileys-7.x-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://github.com/WhiskeySockets/Baileys)
-[![License](https://img.shields.io/badge/License-MIT-F7DF1E?style=for-the-badge&logo=open-source-initiative&logoColor=black)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/GlobalTechInfo/MEGA-MD?style=for-the-badge&logo=starship&color=gold)](https://github.com/GlobalTechInfo/MEGA-MD/stargazers)
 [![Forks](https://img.shields.io/github/forks/GlobalTechInfo/MEGA-MD?style=for-the-badge&logo=git&color=orange)](https://github.com/GlobalTechInfo/MEGA-MD/network/members)
 
@@ -55,7 +53,7 @@
 - [📦 Installation](#-installation)
 - [🚀 Deployment](#-deployment)
   - [📱 Termux](#-termux-android)
-  - [🖥️ VPS / Linux](#-vps--linux-server)
+  - [🖥️ VPS Linux Server](#-vps-linux-server)
   - [🪟 Windows WSL](#-windows-wsl)
   - [🔁 Replit](#-replit)
   - [🟣 Heroku](#-heroku)
@@ -290,7 +288,7 @@ npm start
 
 ---
 
-### 🖥️ VPS / Linux Server
+### 🖥️ VPS Linux Server
 
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com)
 [![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white)](https://debian.org)
@@ -592,14 +590,9 @@ DB_URL=./data/baileys.db
 | `npm start` | Start the bot |
 | `npm run start:optimized` | Start with 512MB memory cap *(cloud use)* |
 | `npm run start:fresh` | Reset data files then start |
-| `npm run build` | Compile TypeScript → `dist/` |
-| `npm run rebuild` | Clean + rebuild |
-| `npm run clean` | Delete `dist/` |
 | `npm run dev` | Watch mode with auto-restart |
-| `npm run setup` | Build + init data files |
 | `npm run reset-data` | Re-initialize all JSON data files |
 | `npm run reset-session` | Delete `session/` folder |
-| `npm run typecheck` | Type check without compiling |
 | `npm run lint` | Run ESLint |
 | `npm test` | Run all tests |
 
@@ -612,7 +605,7 @@ DB_URL=./data/baileys.db
 
 ### Plugin Template
 
-```typescript
+```js
 export default {
     command: 'mycommand',
     aliases: ['mc', 'mycmd'],
@@ -682,12 +675,6 @@ Send any message to the bot — WhatsApp re-syncs keys automatically. They are n
 - Check you're using the right prefix (default `.`)
 - `COMMAND_MODE=private` → only owner can use commands
 - `OWNER_NUMBER` must have no `+` sign
-
-### Build errors
-
-```bash
-rm -rf dist && npm run build
-```
 
 ### Data lost after restart
 
